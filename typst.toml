@@ -1,0 +1,13 @@
+[package]
+name = "iconify"
+version = "0.1.0"
+entrypoint = "lib.typ"
+authors = [
+  "jmuchovej (John Muchovej) <jmuchovej@pm.me>",
+]
+description = "A Typst library for accessing the Iconify icon sets through their JSONs"
+repository = "https://github.com/jmuchovej/typst-iconify"
+excludes = [
+  "package.json", "package-lock.yaml", "**/*.ts", "example.typ", "scripts/**",
+  ".devcontainer/**", "Taskfile.yaml",
+]

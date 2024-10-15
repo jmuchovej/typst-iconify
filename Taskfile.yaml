@@ -1,0 +1,9 @@
+tasks:
+  "devcontainer:setup":
+    cmds: |
+      sudo chown -R $(id -u):$(id -g) $(pwd)/.pnpm-store
+
+  "gather-iconsets":
+    cmds: |
+      pnpm install
+      pnpm tsx ./scripts/gather-icons.ts
