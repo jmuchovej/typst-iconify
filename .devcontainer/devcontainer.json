@@ -1,0 +1,42 @@
+{
+  "image": "ghcr.io/jmuchovej/devcontainers/typst:latest",
+  "name": "Typst Iconify",
+  "mounts": [
+    {
+      "target": "${containerWorkspaceFolder}/.pnpm-store",
+      "type": "volume",
+    },
+  ],
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "myriad-dreamin.tinymist",
+        "shardulm94.trailing-spaces",
+        "stkb.rewrap",
+        "tamasfe.even-better-toml"
+      ],
+      "settings": {
+        "files.eol": "\n",
+        "editor.formatOnSave": true,
+        "[typst]": {
+          "editor.formatOnSave": true
+        },
+        "tinymist.formatterMode": "typstyle",
+        "files.associations": {
+          "*.typ": "typst"
+        },
+      }
+    }
+  },
+  "features": {
+    "ghcr.io/devcontainers/features/common-utils": {
+      "installZsh": true,
+      "upgradePackages": true,
+      "username": "vscode",
+      "configureZshAsDefaultShell": true,
+    },
+    "ghcr.io/eitsupi/devcontainer-features/go-task": {},
+    "ghcr.io/dhoeric/features/act": {},
+    "ghcr.io/devcontainers-community/npm-features/typescript": {},
+  },
+}
